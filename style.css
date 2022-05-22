@@ -1,12 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
     /* this makes it so that adjusting padding/margin doesn't affect the width */
     box-sizing: border-box;
 }
 
 body {
+    font-family: 'Roboto', sans-serif;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
