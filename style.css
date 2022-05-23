@@ -44,7 +44,7 @@ body {
 
 /* Text of Panels */
 .panel h3 {
-    font-size: 24px;
+    font-size: 2rem;
     /* the child (panel) is absolute */
     position: absolute;
     bottom: 20px;
@@ -66,13 +66,15 @@ body {
 
 /* media query that only shows three panels while width is < 480px */
 /* whenever width is > 480px, the 4th and 5th panel will show */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .container {
         width: 100vw;
     }
 
+    /* remove last two panels by using pseudo-selector */
     .panel:nth-of-type(4),
     .panel:nth-of-type(5) {
+        /* removes the panels */
         display: none;
     }
 }
