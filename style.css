@@ -1,3 +1,4 @@
+/* default styles */
 @import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
 
 * {
@@ -19,6 +20,7 @@ body {
     margin: 0;
 }
 
+/* this holds all the panels */
 .container {
     display: flex;
     width: 90vw;
@@ -32,9 +34,10 @@ body {
     border-radius: 50px;
     color: white;
     cursor: pointer;
-    /* flex controls the size of the image */
+    /* flex controls the space each panel will take up */
     flex: 0.4;
     margin: 10px;
+    /* the parent (container) is relative */
     position: relative;
     transition: flex 0.7s ease-in;
 }
@@ -42,6 +45,7 @@ body {
 /* Text of Panels */
 .panel h3 {
     font-size: 24px;
+    /* the child (panel) is absolute */
     position: absolute;
     bottom: 20px;
     left: 20px;
@@ -67,7 +71,8 @@ body {
         width: 100vw;
     }
 
-    .panel:nth-of-type(4), .panel:nth-of-type(5) {
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
         display: none;
-    } 
+    }
 }
