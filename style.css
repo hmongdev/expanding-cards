@@ -66,7 +66,7 @@ body {
 
 /* media query that only shows three panels while width is < 480px */
 /* whenever width is > 480px, the 4th and 5th panel will show */
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     .container {
         width: 100vw;
     }
