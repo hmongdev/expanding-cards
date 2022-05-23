@@ -62,6 +62,8 @@ body {
 /* active panel TEXT styling */
 .panel.active h3 {
     opacity: 1;
+    /* text transition will be delayed 0.4s */
+    transition: opacity 0.3s ease-in 0.4s;
 }
 
 /* media query that only shows three panels while width is < 480px */
