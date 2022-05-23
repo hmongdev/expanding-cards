@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
 
 * {
     /* this makes it so that adjusting padding/margin doesn't affect the width */
@@ -7,17 +7,67 @@
 
 body {
     /* default font */
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Muli', sans-serif;
     /* default layout */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin: 0;
-
     /* need height for the layout to work */
+    justify-content: center;
     height: 100vh;
-    
     /* overflow to hide the scrollbars */
     overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    /* flex controls the size of the image */
+    flex: 0.4;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+/* Text of Panels */
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+/* active panel IMAGE styling */
+.panel.active {
+    /* Grow to 5 while active */
+    flex: 5;
+}
+
+/* active panel TEXT styling */
+.panel.active h3 {
+    opacity: 1;
+}
+
+/* media query that only shows three panels while width is < 480px */
+/* whenever width is > 480px, the 4th and 5th panel will show */
+@media (max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4), .panel:nth-of-type(5) {
+        display: none;
+    } 
 }
