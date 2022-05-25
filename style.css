@@ -20,6 +20,10 @@ body {
     margin: 0;
 }
 
+h1 {
+    text-align: center;
+}
+
 /* this holds all the panels */
 .container {
     display: flex;
