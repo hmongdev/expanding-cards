@@ -11,7 +11,7 @@ panels.forEach(panel => {
 });
 
 // purpose: removes active classes so they collapse when clicked
-function removeActiveClasses() {
+const removeActiveClasses = () => {
     panels.forEach(panel => {
         panel.classList.remove('active');
     })
